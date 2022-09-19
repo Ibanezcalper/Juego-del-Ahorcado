@@ -1,0 +1,233 @@
+/*CREANDO ESTRUCTURA DE LA PÁFINA*/
+.grid-container {
+    display: grid;
+    background-color: #114358;
+    grid-template-rows: 70px 1fr 50px; /*fr == fracción*/
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+}
+
+/*CREANDO HEADER*/
+
+.logo {
+    background-color: #114358;
+    display: flex;
+    justify-content: start;
+}
+
+.logoContenedor{
+    background-color: #F2AA1F;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 70px;
+    height: 70px;
+    border-radius: 5%;
+}
+
+.logoImagen {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+}
+
+.titulo{
+    background-color: #114358;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo_h1 {
+    background-color: #DE744C;
+    color: #F1ECE7;
+    border-radius: 1.5rem;
+    display: inline-block;
+    font-size: 25px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    padding: 15px 25px;
+}
+
+.aclaracion {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #114358;
+}
+
+.aclaracionMayus {
+    font-size: 20px;
+    color: #F1ECE7;
+    background-color: #F2AA1F;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+
+/*CREANDO LA PÁGINA PRINCIPAL*/
+
+
+.flexInicio {
+    display: flex;
+    background-color: #114358;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-column: 1 / span 3;
+}
+
+.flexInicioBtn1, .flexInicioBtn2 {
+    width: 200px;
+    height: 70px;
+    padding: 10px;
+    margin: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-style: bold;
+    background-color: #BFD8D2;
+    color: #090909;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border: 3px solid #090909;
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+.flexInicioBtn1:hover {
+    scale: 1.15;
+    background-color: #77DD77;
+    cursor: pointer;
+}
+
+.flexInicioBtn2:hover {
+    scale: 1.15;
+    background-color: #D34240;
+    cursor: pointer;
+}
+
+
+/*CREANDO FOOTER*/
+.footer {
+    background-color: #DE744C;
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em ;
+}
+
+.footerContacto i {
+    color: #F1ECE7;
+    font-size: 30px;
+    padding-right: 15px;
+}
+
+.footerTexto {
+    color: #F1ECE7;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+
+/*Volviendo responsive*/
+
+@media screen and (max-width:800px){
+
+    .logoContenedor {
+        width: 70px;
+        height: 70px;
+        border-radius: 5%;
+    }
+
+    .titulo {
+        background-color: #114358;
+    }
+
+    .titulo_h1 {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .aclaracion {
+        background-color: #114358;
+    }
+
+    .aclaracionMayus {
+        font-size: 15px;
+        border: none;
+        color: top;
+    }
+
+    .flexJuegoHorca {
+        scale: 0.7;
+        margin-top: 10px;
+    }
+
+    .flex_caja {
+        margin-bottom: 150px;
+    }
+
+    .caja_palabra {
+        font-size: 15px !important ;
+    }
+
+    .cajaBtn {
+        width: 80% !important;
+        font-size: 15px !important;
+    }
+
+    .flex_teclado {
+        display: flex !important;
+    }
+
+    .flexJuegoRenglones {
+        width: 100%;
+    }
+
+    .flexJuegoBtn1 {
+        margin: 0px;
+        top: 90px;
+        width: 80px;
+        height: 55px;
+        font-size: 10px;
+    }
+
+    .flexJuegoBtn2 {
+        margin: 0px;
+        top: 90px;
+        width: 58px;
+        height: 58px;
+        font-size: 10px;
+    }
+
+    .flexJuegoBtn3 {
+        margin: 0px;
+        top: 90px;
+        width: 80px;
+        height: 55px;
+        font-size: 10px;
+    }
+
+    .flex_caja {
+        width: 90%;
+        border-radius: 1.5em;
+    }
+}
+@media screen and (max-width:500px){
+    .aclaracionMayus {
+        font-size: 15px;
+        width: 75%;
+    }
+}

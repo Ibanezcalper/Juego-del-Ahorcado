@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-juego.css" />
+    <link rel="stylesheet" href="style-agregar.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet" />
+    <title>Juego del Ahorcado</title>
+</head>
+
+<body onkeypress="leerLetra(event)">
+    <main>
+        <div class="grid-container">
+            <div class="logo">
+                <div class="logoContenedor">
+                    <img class="logoImagen" src="horca.png" alt="Logo Juego del Ahorcado">
+                </div>
+            </div>
+            <div class="titulo">
+                <h1 class="titulo_h1">JUEGO DEL AHORCADO</h1>
+            </div>
+            <div class="aclaracion">
+                <h4 class="aclaracionMayus">NOMBRES POPULARES</h4>
+            </div>
+
+            <div class="flexInicio">
+                <button class="flexInicioBtn1">JUGAR</button>
+                <button class="flexInicioBtn2">AGREGAR PALABRA</button>
+            </div>
+            <div class="flexJuego">
+                <button class="flexJuegoBtn1">RENDIR</button>
+                <button class="flexJuegoBtn2">VOLVER</button>
+                <button class="flexJuegoBtn3">JUGAR DE NUEVO</button>
+                <div class="flexJuegoHorca">
+                    <div class="linea-base-horizontal"></div>
+                    <div class="linea-base-vertical"></div>
+                    <div class="linea-sup-horizontal"></div>
+                    <div class="linea-sup-vertical"></div>
+                    <div class="cabeza"></div>
+                    <div class="cuerpo"></div>
+                    <div class="brazo1"></div>
+                    <div class="brazo2"></div>
+                    <div class="pierna1"></div>
+                    <div class="pierna2"></div>
+                </div>
+                <div class="flexJuegoRenglones">
+                </div>
+                <textarea disabled class="flex_letraErrada">
+                </textarea>
+                <div class="flex_ganador">
+                    <h4 class="ganador_mensaje">¡¡¡HAS GANADO!!!</h4>
+                </div>
+                <div class="flex_perdedor">
+                    <h4 class="perdedor_mensaje">HAS PERDIDO :C</h4>
+                </div>
+                <div class="flex_caja">
+                    <textarea disabled class="caja_palabra"></textarea>
+                    <button class="cajaBtn">ACEPTAR</button>
+                </div>
+                <div class="flex_teclado">
+                    <div class="teclado_fila1">
+                        <button class="Q">Q</button>
+                        <button class="W">W</button>
+                        <button class="E">E</button>
+                        <button class="R">R</button>
+                        <button class="T">T</button>
+                        <button class="Y">Y</button>
+                        <button class="U">U</button>
+                        <button class="I">I</button>
+                        <button class="O">O</button>
+                        <button class="P">P</button>
+                    </div>
+                    <div class="teclado_fila2">
+                        <button class="A">A</button>
+                        <button class="S">S</button>
+                        <button class="D">D</button>
+                        <button class="F">F</button>
+                        <button class="G">G</button>
+                        <button class="H">H</button>
+                        <button class="J">J</button>
+                        <button class="K">K</button>
+                        <button class="L">L</button>
+                        <button class="Ñ">Ñ</button>
+                    </div>
+                    <div class="teclado_fila3">
+                        <button class="Z">Z</button>
+                        <button class="X">X</button>
+                        <button class="C">C</button>
+                        <button class="V">V</button>
+                        <button class="B">B</button>
+                        <button class="N">N</button>
+                        <button class="M">M</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flexAgregar">
+                <textarea class="flexAgregarTxt" onkeypress="nuevaPalabraEnter(event)"></textarea>
+                <div class="flexAgregarBtns">
+                    <button class="btnAdd">AGREGAR PALABRA</button>
+                    <button class="btnBack">VOLVER AL MENU</button>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footerContacto">
+                    <a target="_blank" href="https://github.com/Ibanezcalper"><i class='bx bxl-github'></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/mario-ibanez-cdd"><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+                <p class="footerTexto">Desarrollado por Mario Ibanez</p>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
